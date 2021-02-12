@@ -16,9 +16,10 @@ void setup_lx()
   sensor.VL6180xDefautSettings();
 }
  
-void ul()
+int ul_2()
 {
   Serial.print("Light = ");
   Serial.print(sensor.getAmbientLight(GAIN_1));
   Serial.print(" Lx\t\t");
+  return sensor.getAmbientLight(GAIN_1);
 }
